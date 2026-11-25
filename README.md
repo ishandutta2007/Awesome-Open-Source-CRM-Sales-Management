@@ -1,166 +1,255 @@
-# Awesome-Open-Source-CRM-Sales-Management
-
 # Awesome Open Source CRM & Sales Management
 
-> A curated list of top Open Source CRM and Sales Management platforms — both SaaS/Hosted commercial solutions with free tiers and fully open-source alternatives for managing leads, pipelines, and customer relationships.
-> 🌟 Star this repo if you find it useful! 🌟
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
+> A curated list of top Open Source CRM and Sales Management platforms — comparing leading SaaS/commercial customer relationship management platforms and community-driven, self-hosted alternatives for pipeline tracking, lead automation, contact management, and sales operations.
+
+🌟 **Star this repository if you find it helpful!** 🌟
 
 ---
 
-## 📋 Table of Contents
+## 📑 Table of Contents
 
-- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [HubSpot Free CRM](#hubspot-free-crm)
-  - [Zoho CRM](#zoho-crm)
-  - [Vtiger Cloud](#vtiger-cloud)
-  - [Bitrix24](#bitrix24)
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Commercial CRM Platforms](#-saas--commercial-crm-platforms)
 - [Open-Source Software](#-open-source-software)
   - [Twenty](#twenty)
-  - [SuiteCRM](#suitecrm)
-  - [EspoCRM](#espocrm)
   - [Odoo CRM](#odoo-crm)
-  - [Frappe CRM](#frappe-crm)
-  - [Krayin](#krayin)
-  - [Dolibarr](#dolibarr)
   - [ERPNext](#erpnext)
-  - [Horilla](#horilla)
+  - [Monica](#monica)
+  - [Krayin](#krayin)
+  - [IDURAR ERP CRM](#idurar-erp-crm)
+  - [Ever Gauzy](#ever-gauzy)
+  - [Dolibarr](#dolibarr)
+  - [SuiteCRM](#suitecrm)
+  - [erxes](#erxes)
+  - [Frappe CRM](#frappe-crm)
+  - [EspoCRM](#espocrm)
   - [BottleCRM](#bottlecrm)
-  - [NextCRM](#nextcrm)
-  - [OroCRM](#orocrm)
+  - [Corteza](#corteza)
+  - [YetiForce](#yetiforce)
+  - [Horilla](#horilla)
+  - [Axelor Open Suite](#axelor-open-suite)
   - [CiviCRM](#civicrm)
+  - [OroCRM](#orocrm)
+- [📊 Comparison at a Glance](#-comparison-at-a-glance)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
-## 🟦 SaaS / Hosted Platforms
+## Sector Overview & Market Dynamics
 
-Commercial, cloud-hosted CRM platforms with free tiers. These are not open-source but are included as reference points for feature comparison.
+The global **Customer Relationship Management (CRM)** software market is valued at approximately **$79.4 Billion in 2024** and is projected to expand to over **$157.5 Billion by 2030**, exhibiting a robust Compound Annual Growth Rate (CAGR) of ~12.1%.
 
-### HubSpot Free CRM
-**Type:** Free CRM with marketing and sales tools
-HubSpot offers a permanently free CRM tier with contact management, deal tracking, and email integration. It is the most widely adopted free CRM, with paid tiers scaling into full marketing, sales, and service hubs. **Trade-off:** Advanced automation, reporting, and AI features require paid plans.
+The sector exhibits a **moderately concentrated, winner-takes-most structure** at the enterprise summit—dominated by multi-billion-dollar hyperscalers like Salesforce, HubSpot, and Microsoft—while fostering a rapidly expanding, highly active open-source and self-hosted ecosystem that addresses data sovereignty, on-premises privacy, developer extensibility, and vendor lock-in concerns.
 
-### Zoho CRM
-**Type:** CRM with a free tier for small teams
-Zoho CRM offers a free edition for up to 3 users, with paid tiers adding scoring rules, sales forecasting, Blueprint process design, and anomaly detection [from previous context]. It integrates with the broader Zoho suite. **Trade-off:** The free tier is limited in users and advanced features.
+---
 
-### Vtiger Cloud
-**Type:** CRM with both cloud and open-source editions
-Vtiger offers a cloud CRM alongside its open-source edition. The open-source edition is based on the Mozilla Public License (VPL 1.1), with core features including contact management, pipeline management, help desk, inventory, reporting, and multichannel communication [citation:5][citation:11]. The cloud edition adds managed hosting and support. **Note:** The open-source edition is not the same as a cloud-free edition [citation:11].
+## 🟦 SaaS & Commercial CRM Platforms
 
-### Bitrix24
-**Type:** CRM with collaboration tools and a free tier
-Bitrix24 combines CRM with team collaboration (chat, video, tasks, Drive). The free tier includes unlimited deals and invoices, 5 GB storage, and CoPilot AI [from previous context]. **Trade-off:** Free accounts are deleted after inactivity.
+Enterprise and commercial cloud-hosted CRM suites with free tiers or trials. Sorted by company size (valuation / market capitalization / revenue) in descending order:
+
+| Platform | Company Size (Valuation / Revenue) | Pricing (Specific Starting Tier) | Free Tier / Free Trial Limits | Key Sales & CRM Focus |
+| :--- | :--- | :--- | :--- | :--- |
+| **Microsoft Dynamics 365 Sales** | **$3.55T Market Cap** (~$318B Revenue) | **$65.00/user/month** (Sales Professional tier) | **30-day free trial** (up to 25 users with sample data; no credit card required) | Enterprise sales force automation, native Microsoft 365/Teams collaboration, and AI sales copilot. |
+| **Salesforce Sales Cloud** | **$310B Market Cap** (~$34.9B Revenue) | **$25.00/user/month** (Starter Suite tier, billed annually) | **30-day free trial** (Starter Suite with pre-built dashboards; no credit card required) | Comprehensive enterprise pipeline tracking, lead routing, AppExchange ecosystem, and AI agents. |
+| **HubSpot CRM** | **$32B Market Cap** (~$2.17B Revenue) | **$15.00/seat/month** (Sales Hub Starter tier, billed annually) | **Free forever plan** (up to 5 users, 1,000,000 contacts, deal pipelines, live chat, and email tracking) | Inbound marketing, frictionless contact and lead management, deal pipeline tracking, and email integration. |
+| **Zoho CRM** | **$1.4B+ Revenue** (Privately held, ~$15B+ valuation) | **$14.00/user/month** (Standard tier, billed annually) | **Free forever plan** (up to 3 users, 5,000 records, contact management, deal stages, and mobile app access) | Multichannel sales automation, AI forecasting (Zia), Blueprint workflow automation, and custom layouts. |
+| **Bitrix24** | **$50M+ Revenue** (Privately held bootstrap) | **$49.00/month for 5 users** (Basic tier, billed annually) | **Free forever plan** (unlimited users, 5 GB cloud storage, unlimited deals & contacts, built-in chat & tasks) | Unified workspace combining CRM, pipeline automation, project tasks, team chat, document management, and telephony. |
+| **Vtiger Cloud CRM** | **$20M+ Revenue** (Privately held bootstrap) | **$12.00/user/month** (One Pilot tier, billed annually) | **15-day free trial** (full access to all One Professional features, unlimited contacts, automated workflows) | All-in-one sales pipeline, integrated help desk, inventory invoicing, and omnichannel customer communication. |
 
 ---
 
 ## 🟩 Open-Source Software
 
-Self-hosted, community-driven CRM and sales management platforms. All listed projects offer source code you can deploy on your own infrastructure.
+Self-hosted, community-driven CRM, sales automation, and customer experience platforms. Sorted by GitHub stargazer count in descending order:
 
 ### Twenty
-**Stack:** TypeScript / NestJS / React / PostgreSQL / Redis | **License:** AGPL-3.0 (core)
-Twenty is positioned as the **#1 open-source CRM**, built as a modern alternative to Salesforce and HubSpot . Key capabilities include customizable objects and fields, Kanban and table views, custom roles and permissions, workflow automation with triggers and actions, and email/calendar/file integration . It has 28,000+ GitHub stars and active development. The stack uses NestJS with BullMQ, PostgreSQL, and Redis, with React on the frontend . A free plan is available, with paid tiers from $9/mo [citation:1]. **Trade-off:** Enterprise features are gated to commercial licensing.
-**Best for:** Teams wanting a modern, developer-friendly CRM they can self-host and extend as code.
-
-### SuiteCRM
-**Stack:** PHP / MySQL | **License:** AGPL-3.0
-SuiteCRM is the most established open-source CRM, forked from SugarCRM Community Edition and maintained by SalesAgility [citation:3]. Key features include sales automation, marketing automation, workflow, reporting, and a REST API [citation:3]. Gartner reviewers highlight its **extensibility** as a major strength—"you can see and modify anything in the product" [citation:3]. It is a direct alternative to Salesforce, SAP, Microsoft Dynamics, and Oracle [citation:3]. A free plan is available, with paid plans from £50/mo [citation:1]. **Trade-off:** The codebase is older with a dated UI compared to modern alternatives.
-**Best for:** Organizations wanting a proven, feature-rich enterprise CRM with deep customization and a large community.
-
-### EspoCRM
-**Stack:** PHP / MySQL/PostgreSQL | **License:** AGPL-3.0
-EspoCRM is a fully customizable open-source CRM with a single-page frontend and REST API [citation:7]. Users consistently praise its **ease of customization** via the Entity Manager, which allows creating custom fields and entities without coding [citation:4]. Key features include accounts, contacts, opportunities, activities, campaigns, workflows, and project management with Gantt views [citation:4]. It is rated 8.8/10 in a 2026 comparison of 242 CRM tools [citation:1]. **Trade-off:** Some users note paid packages are now sold separately, and upgrades can require command-line work .
-**Best for:** Small to mid-sized businesses wanting a genuinely customizable CRM that fits their exact process rather than forcing them into a fixed workflow.
+[![Stars](https://img.shields.io/github/stars/twentyhq/twenty?style=social&color=white)](https://github.com/twentyhq/twenty/stargazers)
+- **Repository:** [twentyhq/twenty](https://github.com/twentyhq/twenty)
+- **Primary Stack:** TypeScript / NestJS / React / PostgreSQL / Redis
+- **License:** AGPL-3.0
+- Twenty is a modern open-source alternative to Salesforce, built from scratch with a modular, developer-friendly architecture. It provides custom object modeling, Kanban deal boards, table views, rich workflow automations, and native email/calendar synchronization.
 
 ### Odoo CRM
-**Stack:** Python / PostgreSQL | **License:** LGPL-3.0 (Community)
-Odoo CRM is part of the broader Odoo ERP suite, ranked **#1 in a 2026 comparison of 242 CRM tools (9.5/10)** [citation:1]. The Community edition is 100% free and open-source, with access to 40,000+ community apps and full PostgreSQL data ownership [citation:6]. CRM features include sales pipelines, lead management, email integration, and reporting. **Trade-off:** Odoo is a full ERP—adopting CRM means adopting the broader platform, with significant configuration effort.
-**Best for:** Organizations wanting CRM integrated with finance, inventory, and manufacturing in a single open-source ERP.
-
-### Frappe CRM
-**Stack:** Python / Frappe Framework / Vue | **License:** GPL-3.0
-Frappe CRM is a modern CRM built on the Frappe framework (same ecosystem as ERPNext), ranked **#3 in sales force automation (7.3/10)** [citation:8]. It provides lead and deal management, email integration, telephony, and a customizable desk interface [citation:7]. The Frappe ecosystem offers a path to ERPNext for organizations wanting integrated ERP and CRM. **Trade-off:** Requires the Frappe/ERPNext stack.
-**Best for:** Teams already in or considering the Frappe/ERPNext ecosystem wanting CRM integrated with broader business operations.
-
-### Krayin
-**Stack:** PHP / Laravel | **License:** MIT
-Krayin is a customer, lead, and sales management platform built with Laravel [citation:7]. The **MIT license is permissive** for commercial modifications, making it attractive for teams wanting to build on top of a CRM rather than just use it. **Trade-off:** Smaller ecosystem and community than SuiteCRM or EspoCRM.
-**Best for:** Laravel developers and teams wanting a permissively licensed, customizable CRM foundation.
-
-### Dolibarr
-**Stack:** PHP / MySQL | **License:** GPL-3.0
-Dolibarr is a modular ERP and CRM for small businesses and foundations [citation:7]. CRM features include contacts, leads, opportunities, and activity tracking, alongside invoicing, inventory, and HR modules. **Trade-off:** More of an ERP with CRM included than a dedicated sales CRM.
-**Best for:** SMBs wanting an all-in-one ERP + CRM in a single self-hosted package.
+[![Stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers)
+- **Repository:** [odoo/odoo](https://github.com/odoo/odoo)
+- **Primary Stack:** Python / JavaScript / PostgreSQL
+- **License:** LGPL-3.0
+- Odoo CRM is an integral component of the comprehensive open-source Odoo ERP ecosystem. It delivers automated lead nurturing, pipeline stage management, automated opportunity scoring, and complete integration with invoicing, inventory, and marketing apps.
 
 ### ERPNext
-**Stack:** Python / Frappe Framework / MariaDB | **License:** GPL-3.0
-ERPNext is an ERP with CRM, sales, accounting, inventory, and manufacturing modules [citation:7]. Like Odoo, it is a full business suite with CRM as one component. **Trade-off:** Significant configuration and operational overhead.
-**Best for:** Organizations wanting a complete open-source ERP with CRM functionality included.
+[![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers)
+- **Repository:** [frappe/erpnext](https://github.com/frappe/erpnext)
+- **Primary Stack:** Python / Frappe Framework / MariaDB / Vue
+- **License:** GPL-3.0
+- ERPNext provides a full-featured CRM module as part of its open-source ERP system. It manages lead lifecycles, customer communication histories, sales quotations, sales orders, and post-sale support workflows within a unified database.
 
-### Horilla
-**Stack:** Python / Django | **License:** LGPL-2.1
-Horilla is an open-source CRM ranked **#1 in sales force automation (8.0/10)** [citation:8]. It runs on Linux, Windows, macOS, Android, iOS, and the web, with self-hosting and API access [citation:8]. It includes CRM, HR, and recruitment modules. **Trade-off:** Smaller community and ecosystem than SuiteCRM or EspoCRM.
-**Best for:** Teams wanting a modern Django-based CRM with HR integration and mobile support.
+### Monica
+[![Stars](https://img.shields.io/github/stars/monicahq/monica?style=social&color=white)](https://github.com/monicahq/monica/stargazers)
+- **Repository:** [monicahq/monica](https://github.com/monicahq/monica)
+- **Primary Stack:** PHP / Laravel / Vue.js / MySQL
+- **License:** AGPL-3.0
+- Monica is a personal and relationship-focused CRM designed to track interactions, relationship milestones, conversation histories, contact details, notes, and activity reminders for independent sales professionals and personal networks.
+
+### Krayin
+[![Stars](https://img.shields.io/github/stars/krayin/laravel-crm?style=social&color=white)](https://github.com/krayin/laravel-crm/stargazers)
+- **Repository:** [krayin/laravel-crm](https://github.com/krayin/laravel-crm)
+- **Primary Stack:** PHP / Laravel / MySQL / Vue.js
+- **License:** MIT
+- Krayin CRM is an intuitive, customizable open-source CRM built specifically on Laravel for customer, lead, and sales pipeline management. It features custom attribute building, Kanban deal pipelines, activity scheduling, and an extensible architecture under a permissive MIT license.
+
+### IDURAR ERP CRM
+[![Stars](https://img.shields.io/github/stars/idurar/idurar-erp-crm?style=social&color=white)](https://github.com/idurar/idurar-erp-crm/stargazers)
+- **Repository:** [idurar/idurar-erp-crm](https://github.com/idurar/idurar-erp-crm)
+- **Primary Stack:** JavaScript / Node.js / Express / React / MongoDB
+- **License:** MIT
+- IDURAR is a modern open-source ERP and CRM web application tailored for small and medium-sized enterprises. It provides lead management, customer tracking, sales quotes, automated invoicing, inventory coordination, and payment processing built on a clean MERN stack.
+
+### Ever Gauzy
+[![Stars](https://img.shields.io/github/stars/ever-co/ever-gauzy?style=social&color=white)](https://github.com/ever-co/ever-gauzy/stargazers)
+- **Repository:** [ever-co/ever-gauzy](https://github.com/ever-co/ever-gauzy)
+- **Primary Stack:** TypeScript / NestJS / Angular / PostgreSQL / SQLite
+- **License:** AGPL-3.0 / Apache-2.0
+- Ever Gauzy is an open business management platform uniting CRM, sales proposals, invoicing, time tracking, and project management. It is designed for remote agencies, digital studios, and service businesses requiring end-to-end sales and fulfillment monitoring.
+
+### Dolibarr
+[![Stars](https://img.shields.io/github/stars/Dolibarr/dolibarr?style=social&color=white)](https://github.com/Dolibarr/dolibarr/stargazers)
+- **Repository:** [Dolibarr/dolibarr](https://github.com/Dolibarr/dolibarr)
+- **Primary Stack:** PHP / MySQL / MariaDB
+- **License:** GPL-3.0
+- Dolibarr is an all-in-one modular ERP and CRM suite for businesses, foundations, and freelancers. It offers native prospect management, lead tracking, customer contact directories, commercial proposals, sales orders, contracts, and billing.
+
+### SuiteCRM
+[![Stars](https://img.shields.io/github/stars/salesagility/SuiteCRM?style=social&color=white)](https://github.com/salesagility/SuiteCRM/stargazers)
+- **Repository:** [salesagility/SuiteCRM](https://github.com/salesagility/SuiteCRM)
+- **Primary Stack:** PHP / Symfony / MariaDB / MySQL
+- **License:** AGPL-3.0
+- SuiteCRM is one of the most widely deployed open-source enterprise CRM applications globally, originally forked from SugarCRM Community Edition. It features advanced workflow automation, quote generation, sales pipeline forecasting, contract management, and customer self-service portals.
+
+### erxes
+[![Stars](https://img.shields.io/github/stars/erxes/erxes?style=social&color=white)](https://github.com/erxes/erxes/stargazers)
+- **Repository:** [erxes/erxes](https://github.com/erxes/erxes)
+- **Primary Stack:** TypeScript / Node.js / React / GraphQL / MongoDB
+- **License:** AGPL-3.0
+- erxes is an open-source Experience Operating System (XOS) combining CRM, sales pipelines, omnichannel inbox, marketing automations, and customer support. It serves as an open alternative to HubSpot, Intercom, and Zendesk.
+
+### Frappe CRM
+[![Stars](https://img.shields.io/github/stars/frappe/crm?style=social&color=white)](https://github.com/frappe/crm/stargazers)
+- **Repository:** [frappe/crm](https://github.com/frappe/crm)
+- **Primary Stack:** Python / Frappe Framework / Vue.js / Tailwind CSS
+- **License:** GPL-3.0
+- Frappe CRM is a streamlined, purpose-built CRM application created by the Frappe team. It features modern lead and deal Kanban workflows, call integration via telephony, email tracking, automated lead assignment rules, and a clean desk interface.
+
+### EspoCRM
+[![Stars](https://img.shields.io/github/stars/espocrm/espocrm?style=social&color=white)](https://github.com/espocrm/espocrm/stargazers)
+- **Repository:** [espocrm/espocrm](https://github.com/espocrm/espocrm)
+- **Primary Stack:** PHP / MySQL / MariaDB / Backbone.js
+- **License:** AGPL-3.0
+- EspoCRM is a lightweight, responsive open-source CRM application renowned for its flexible Entity Manager. It allows non-technical administrators to design custom objects, relationship flows, sales automation rules, and customer portals through an intuitive UI.
 
 ### BottleCRM
-**Stack:** Python / Django / SvelteKit / Flutter | **License:** MIT
-BottleCRM is a free, open-source, self-hosted, multi-tenant CRM with sales, support tickets, and invoicing in one application [citation:13]. It includes a **native Flutter mobile app** and PostgreSQL Row-Level Security for tenant isolation. **Trade-off:** Newer project with a smaller community.
-**Best for:** Teams wanting an MIT-licensed CRM with native mobile apps and built-in support tooling.
+[![Stars](https://img.shields.io/github/stars/MicroPyramid/Django-CRM?style=social&color=white)](https://github.com/MicroPyramid/Django-CRM/stargazers)
+- **Repository:** [MicroPyramid/Django-CRM](https://github.com/MicroPyramid/Django-CRM)
+- **Primary Stack:** Python / Django / SvelteKit / Flutter / PostgreSQL
+- **License:** MIT
+- BottleCRM (Django-CRM) is a self-hosted, multi-tenant CRM integrating sales pipeline tracking, support ticketing, and invoicing. It includes native Flutter mobile applications for iOS and Android with PostgreSQL Row-Level Security for enterprise tenant isolation.
 
-### NextCRM
-**Stack:** TypeScript / Next.js | **License:** MIT
-NextCRM is a CRM with projects, invoicing, and documents built with Next.js [citation:7]. It combines CRM with light project management and document handling. **Trade-off:** Younger project than established alternatives.
-**Best for:** Teams wanting a Next.js-based CRM with project and invoice features.
+### Corteza
+[![Stars](https://img.shields.io/github/stars/cortezaproject/corteza?style=social&color=white)](https://github.com/cortezaproject/corteza/stargazers)
+- **Repository:** [cortezaproject/corteza](https://github.com/cortezaproject/corteza)
+- **Primary Stack:** Go / Vue.js / PostgreSQL / MySQL
+- **License:** Apache-2.0
+- Corteza is a 100% open-source low-code platform and CRM alternative to Salesforce. It provides visual record management, customizable sales pipelines, enterprise workflow automation triggers, and multi-tenant security architecture under an Apache-2.0 license.
 
-### OroCRM
-**Stack:** PHP / Symfony | **License:** OSL-3.0
-OroCRM is a CRM for marketing, sales, and customer service built on Symfony [citation:7]. It is designed for flexibility and multi-channel integration, with a robust API. **Trade-off:** Heavier and more complex than simpler CRMs.
-**Best for:** Enterprises and developers wanting a Symfony-based, highly extensible CRM platform.
+### YetiForce
+[![Stars](https://img.shields.io/github/stars/YetiForceCompany/YetiForceCRM?style=social&color=white)](https://github.com/YetiForceCompany/YetiForceCRM/stargazers)
+- **Repository:** [YetiForceCompany/YetiForceCRM](https://github.com/YetiForceCompany/YetiForceCRM)
+- **Primary Stack:** PHP / MySQL / MariaDB / JavaScript
+- **License:** YetiForce Public License
+- YetiForce is an open-source CRM built on strict enterprise security standards and modular architecture. It features hundreds of customizable modules covering lead acquisition, pipeline stages, service desk tickets, and GDPR compliance.
+
+### Horilla
+[![Stars](https://img.shields.io/github/stars/horilla-opensource/horilla?style=social&color=white)](https://github.com/horilla-opensource/horilla/stargazers)
+- **Repository:** [horilla-opensource/horilla](https://github.com/horilla-opensource/horilla)
+- **Primary Stack:** Python / Django / PostgreSQL / JavaScript
+- **License:** LGPL-2.1
+- Horilla provides open-source customer and workforce management capabilities built on Django. It combines pipeline tracking, contact relationships, employee onboarding, and team performance tracking within a unified self-hosted interface.
+
+### Axelor Open Suite
+[![Stars](https://img.shields.io/github/stars/axelor/axelor-open-suite?style=social&color=white)](https://github.com/axelor/axelor-open-suite/stargazers)
+- **Repository:** [axelor/axelor-open-suite](https://github.com/axelor/axelor-open-suite)
+- **Primary Stack:** Java / Angular / PostgreSQL
+- **License:** AGPL-3.0
+- Axelor Open Suite is an open-source low-code platform with integrated CRM, BPM, and ERP modules. It enables visual sales pipeline construction, lead qualification workflows, quotation generation, and business process automation.
 
 ### CiviCRM
-**Stack:** PHP / MySQL | **License:** AGPL-3.0
-CiviCRM is a constituent relationship management system for nonprofits, covering contacts, donations, memberships, events, and email [citation:7]. It is the leading open-source CRM for the nonprofit sector. **Trade-off:** Not designed for commercial sales pipelines.
-**Best for:** Nonprofits and membership organizations needing donor and constituent management.
+[![Stars](https://img.shields.io/github/stars/civicrm/civicrm-core?style=social&color=white)](https://github.com/civicrm/civicrm-core/stargazers)
+- **Repository:** [civicrm/civicrm-core](https://github.com/civicrm/civicrm-core)
+- **Primary Stack:** PHP / MySQL / Drupal / WordPress / Joomla
+- **License:** AGPL-3.0
+- CiviCRM is the benchmark constituent relationship management system tailored specifically for non-profits, associations, and civic sector organizations. It excels at managing donors, memberships, contribution pipelines, volunteer events, and advocacy campaigns.
+
+### OroCRM
+[![Stars](https://img.shields.io/github/stars/orocrm/crm?style=social&color=white)](https://github.com/orocrm/crm/stargazers)
+- **Repository:** [orocrm/crm](https://github.com/orocrm/crm)
+- **Primary Stack:** PHP / Symfony / PostgreSQL / MySQL
+- **License:** OSL-3.0
+- OroCRM is an open-source CRM designed for multichannel commerce and B2B enterprises. Built on Symfony, it offers 360-degree customer views, marketing campaign management, sales forecasting, and deep integration with e-commerce storefronts.
 
 ---
 
 ## 📊 Comparison at a Glance
 
-| Software | License | Stack | Multi-Tenant | Mobile App | Self-Hosted | Best For |
-|----------|---------|-------|--------------|------------|-------------|----------|
-| **HubSpot Free** | Proprietary | Cloud | ✅ | ✅ | ❌ | Free start + growth path |
-| **Zoho CRM** | Proprietary | Cloud | ✅ | ✅ | ❌ | 3 free users + automation |
-| **Twenty** | AGPL-3.0 | TypeScript/NestJS | (Check) | ❌ | ✅ | Modern Salesforce alternative |
-| **SuiteCRM** | AGPL-3.0 | PHP/MySQL | (Check) | (Limited) | ✅ | Proven enterprise OSS |
-| **EspoCRM** | AGPL-3.0 | PHP/MySQL | (Check) | ❌ | ✅ | Customizable + project tools |
-| **Odoo CRM** | LGPL-3.0 | Python/Postgres | (Check) | ✅ | ✅ | Full ERP + CRM |
-| **Frappe CRM** | GPL-3.0 | Python/Frappe | (Check) | ❌ | ✅ | ERPNext ecosystem |
-| **Krayin** | MIT | PHP/Laravel | (Check) | ❌ | ✅ | Permissive license |
-| **Horilla** | LGPL-2.1 | Python/Django | (Check) | ✅ | ✅ | CRM + HR |
-| **BottleCRM** | MIT | Django/Flutter | ✅ (RLS) | ✅ Flutter | ✅ | MIT + mobile + support |
-| **CiviCRM** | AGPL-3.0 | PHP/MySQL | (Check) | ❌ | ✅ | Nonprofits |
+| Software | Classification | Primary Stack | License | Multi-Tenant | Mobile App | Best For |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Salesforce Sales Cloud** | Commercial SaaS | Proprietary / Cloud | Commercial | ✅ | ✅ iOS / Android | Global enterprise sales organizations & large teams |
+| **HubSpot CRM** | Commercial SaaS | Proprietary / Cloud | Commercial | ✅ | ✅ iOS / Android | Inbound marketing, startups & scaling SMB pipelines |
+| **Zoho CRM** | Commercial SaaS | Proprietary / Cloud | Commercial | ✅ | ✅ iOS / Android | Small-to-mid teams seeking automation & Zoho suite |
+| **Bitrix24** | Commercial SaaS | Proprietary / Cloud | Commercial | ✅ | ✅ iOS / Android | Teams seeking all-in-one CRM, chat & task management |
+| **Twenty** | Open Source | TypeScript / NestJS / React | AGPL-3.0 | ✅ | ❌ Web-responsive | Modern developer-first alternative to Salesforce |
+| **Odoo CRM** | Open Source | Python / PostgreSQL | LGPL-3.0 | ✅ | ✅ iOS / Android | Businesses needing CRM integrated into full ERP |
+| **ERPNext** | Open Source | Python / Frappe / MariaDB | GPL-3.0 | ✅ | ✅ PWA / Mobile | Complete open-source ERP with sales lifecycle |
+| **Monica** | Open Source | PHP / Laravel / Vue | AGPL-3.0 | ❌ | ✅ Third-party / PWA | Personal relationship & individual consultant CRM |
+| **Krayin** | Open Source | PHP / Laravel / MySQL | MIT | ❌ | ❌ Web-responsive | Laravel developers seeking permissively licensed CRM |
+| **IDURAR ERP CRM** | Open Source | Node.js / React / MongoDB | MIT | ❌ | ❌ Web-responsive | Startups & developers wanting MERN stack CRM/ERP |
+| **Ever Gauzy** | Open Source | TypeScript / NestJS / Angular | AGPL-3.0 / Apache | ✅ | ✅ Mobile / Desktop | Remote agencies, project CRM & timesheet management |
+| **Dolibarr** | Open Source | PHP / MySQL | GPL-3.0 | ✅ | ❌ Web-responsive | SMBs & freelancers needing modular CRM + invoicing |
+| **SuiteCRM** | Open Source | PHP / Symfony / MariaDB | AGPL-3.0 | ✅ | ⚠️ Community Apps | Established enterprise self-hosted CRM deployments |
+| **erxes** | Open Source | TypeScript / React / MongoDB | AGPL-3.0 | ✅ | ❌ Web-responsive | Omnichannel customer messaging & growth marketing |
+| **Frappe CRM** | Open Source | Python / Frappe / Vue | GPL-3.0 | ✅ | ❌ Web-responsive | Modern, clean sales force automation & telephony |
+| **EspoCRM** | Open Source | PHP / MySQL | AGPL-3.0 | ✅ | ❌ Web-responsive | Highly customizable entities & sales workflow automation |
+| **BottleCRM** | Open Source | Python / Django / SvelteKit | MIT | ✅ (RLS) | ✅ Flutter Native | Teams needing MIT license & native mobile apps |
+| **Corteza** | Open Source | Go / Vue / PostgreSQL | Apache-2.0 | ✅ | ❌ Web-responsive | Low-code enterprise CRM & Salesforce migration |
+| **YetiForce** | Open Source | PHP / MySQL | Custom / YPL | ✅ | ✅ Native / PWA | High-security enterprise CRM & compliance audits |
+| **Horilla** | Open Source | Python / Django | LGPL-2.1 | ❌ | ✅ Native / Web | Combined sales CRM & HR workforce management |
+| **Axelor Open Suite** | Open Source | Java / Angular / PostgreSQL | AGPL-3.0 | ✅ | ✅ Mobile App | Low-code BPM + CRM for mid-market enterprises |
+| **CiviCRM** | Open Source | PHP / MySQL | AGPL-3.0 | ✅ | ⚠️ Third-party | Non-profits, civic associations & fundraising |
+| **OroCRM** | Open Source | PHP / Symfony | OSL-3.0 | ✅ | ❌ Web-responsive | Omnichannel e-commerce & B2B account management |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source CRM or sales management tool that should be listed here, please open a pull request with:
+Contributions are warmly welcome! If you know of an outstanding open-source CRM platform or sales management project that should be added to this list:
 
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
-
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source.
-
-**Note on the open-source ecosystem:** The open-source CRM landscape is **led by Twenty** as the most modern developer-friendly option, explicitly positioned as the #1 open-source CRM with a clean SaaS-like interface and customizable data model . **SuiteCRM** remains the most established enterprise-grade option with deep customization and a large community [citation:3], while **EspoCRM** is praised for its balance of customization and usability, particularly by small and mid-sized businesses [citation:4]. **Odoo CRM** and **Frappe CRM** serve organizations wanting CRM integrated with broader ERP functionality [citation:6][citation:7]. For teams prioritizing permissive licensing or mobile-first experiences, **Krayin** (MIT) and **BottleCRM** (MIT, native Flutter app) offer compelling alternatives. No single open-source project fully replicates HubSpot's marketing-sales-service breadth, but these tools cover the core lead, pipeline, and customer management workflows comprehensively for self-hosted deployments.
+1. Fork this repository.
+2. Create a new branch: `git checkout -b feature/new-crm-platform`
+3. Add your entry following the established format:
+   - Include a star badge linking to the repository's stargazers: `[![Stars](https://img.shields.io/github/stars/org/repo?style=social&color=white)](https://github.com/org/repo/stargazers)`
+   - Include repository link, primary stack, license, and a concise 2–3 sentence description.
+   - Insert it in the sorted order based on stargazers count.
+4. Submit a Pull Request with a clear description of why the tool is valuable for open-source sales management and CRM practitioners.
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
+This curated list and documentation are released under the [Creative Commons Zero 1.0 Universal](LICENSE) (CC0 1.0) Public Domain Dedication. All listed commercial products and open-source software packages remain the copyrighted intellectual property and trademarks of their respective creators and owners.
 
 ---
 
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+⭐ **Found this resource useful? Please consider starring this repository!** ⭐
