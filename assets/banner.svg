@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <radialGradient id="glowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filters for Glow & Shadows -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Animations for dynamic subtle background elements -->
+    <style>
+      @keyframes floatLeftRight {
+        0% { transform: translateX(0px) translateY(0px); }
+        50% { transform: translateX(18px) translateY(-10px); }
+        100% { transform: translateX(0px) translateY(0px); }
+      }
+      @keyframes floatUpDown {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-14px); }
+        100% { transform: translateY(0px); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.25; transform: scale(1); }
+        50% { opacity: 0.45; transform: scale(1.08); }
+      }
+      @keyframes dashMove {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -40; }
+      }
+      .floating-card-1 {
+        animation: floatLeftRight 7s ease-in-out infinite;
+      }
+      .floating-card-2 {
+        animation: floatUpDown 6s ease-in-out infinite 1s;
+      }
+      .floating-card-3 {
+        animation: floatLeftRight 8s ease-in-out infinite 2s;
+      }
+      .pulsing-glow {
+        transform-origin: center;
+        animation: pulseGlow 5s ease-in-out infinite;
+      }
+      .moving-dash {
+        stroke-dasharray: 6 6;
+        animation: dashMove 2.5s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Ambient Pulsing Glow Background -->
+  <ellipse cx="600" cy="180" rx="420" ry="160" fill="url(#glowGlow)" class="pulsing-glow" />
+
+  <!-- Tech Geometric Grid Pattern Background -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="360" />
+    <line x1="250" y1="0" x2="250" y2="360" />
+    <line x1="400" y1="0" x2="400" y2="360" />
+    <line x1="550" y1="0" x2="550" y2="360" />
+    <line x1="700" y1="0" x2="700" y2="360" />
+    <line x1="850" y1="0" x2="850" y2="360" />
+    <line x1="1000" y1="0" x2="1000" y2="360" />
+    <line x1="1150" y1="0" x2="1150" y2="360" />
+
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Flowing Pipeline Curves with Moving Dashes (Background depth) -->
+  <path d="M 50,310 C 250,310 250,70 500,70 C 750,70 850,290 1150,290" fill="none" stroke="#6366f1" stroke-opacity="0.2" stroke-width="3" />
+  <path d="M 50,310 C 250,310 250,70 500,70 C 750,70 850,290 1150,290" fill="none" stroke="url(#accentGrad1)" stroke-width="2" class="moving-dash" />
+
+  <path d="M 100,50 C 350,50 400,320 700,320 C 950,320 1000,90 1180,90" fill="none" stroke="url(#accentGrad2)" stroke-opacity="0.25" stroke-width="1.5" class="moving-dash" />
+
+  <!-- Dynamic Floating Decorative Cards (Positioned on the flanks so they never obstruct central titles) -->
+
+  <!-- Left Flank Pill: Leads & Pipeline -->
+  <g class="floating-card-1" transform="translate(60, 80)">
+    <rect width="180" height="64" rx="14" fill="url(#cardGrad)" stroke="#6366f1" stroke-opacity="0.3" stroke-width="1" filter="url(#cardShadow)" backdrop-filter="blur(10px)" />
+    <circle cx="28" cy="32" r="14" fill="#6366f1" fill-opacity="0.2" />
+    <text x="28" y="37" font-size="14" text-anchor="middle">🎯</text>
+    <text x="54" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">Pipeline Deals</text>
+    <text x="54" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Active: 1,420</text>
+    <rect x="135" y="24" width="32" height="16" rx="8" fill="#10b981" fill-opacity="0.2" />
+    <text x="151" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#34d399" text-anchor="middle">+34%</text>
+  </g>
+
+  <!-- Left Lower Pill: Open Source / Self-Hosted -->
+  <g class="floating-card-2" transform="translate(45, 230)">
+    <rect width="190" height="58" rx="12" fill="url(#cardGrad)" stroke="#3b82f6" stroke-opacity="0.25" stroke-width="1" filter="url(#cardShadow)" />
+    <circle cx="26" cy="29" r="12" fill="#3b82f6" fill-opacity="0.2" />
+    <text x="26" y="34" font-size="13" text-anchor="middle">⚡</text>
+    <text x="48" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Self-Hosted Stack</text>
+    <text x="48" y="43" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#38bdf8">100% Data Ownership</text>
+  </g>
+
+  <!-- Right Flank Card: Conversion / Win Rate -->
+  <g class="floating-card-2" transform="translate(950, 75)">
+    <rect width="190" height="68" rx="14" fill="url(#cardGrad)" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1" filter="url(#cardShadow)" />
+    <circle cx="28" cy="34" r="14" fill="#8b5cf6" fill-opacity="0.2" />
+    <text x="28" y="39" font-size="14" text-anchor="middle">📈</text>
+    <text x="54" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">Win Rate Index</text>
+    <text x="54" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#a78bfa">Enterprise Efficacy</text>
+    <rect x="145" y="25" width="34" height="18" rx="9" fill="#8b5cf6" fill-opacity="0.2" />
+    <text x="162" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#c084fc" text-anchor="middle">98.2%</text>
+  </g>
+
+  <!-- Right Lower Pill: Automation / Webhooks -->
+  <g class="floating-card-3" transform="translate(965, 230)">
+    <rect width="180" height="58" rx="12" fill="url(#cardGrad)" stroke="#10b981" stroke-opacity="0.3" stroke-width="1" filter="url(#cardShadow)" />
+    <circle cx="26" cy="29" r="12" fill="#10b981" fill-opacity="0.2" />
+    <text x="26" y="34" font-size="13" text-anchor="middle">🤖</text>
+    <text x="48" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">AI Sales Copilots</text>
+    <text x="48" y="43" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#34d399">Omnichannel &amp; CRM</text>
+  </g>
+
+  <!-- Foreground Main Title & Badges Container (Clear, perfectly legible, centered) -->
+  <g id="foreground-content">
+    <!-- Category Pill Badge -->
+    <g transform="translate(600, 70)">
+      <rect x="-140" y="-16" width="280" height="32" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="url(#accentGrad1)" stroke-width="1.5" />
+      <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#e2e8f0" text-anchor="middle">✨ CURATED OPEN SOURCE &amp; SAAS</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="145" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="800" text-anchor="middle" fill="#ffffff" letter-spacing="-0.5">
+      Open Source CRM &amp; Sales Management
+    </text>
+
+    <!-- Gradient Bar Underline -->
+    <rect x="420" y="165" width="360" height="4" rx="2" fill="url(#accentGrad1)" />
+
+    <!-- Subtitle -->
+    <text x="600" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#94a3b8">
+      Top Self-Hosted Platforms, Modern SaaS Alternatives, and Sales Automation Tools
+    </text>
+
+    <!-- Feature Pills / Highlights -->
+    <g transform="translate(600, 260)">
+      <!-- Pill 1: Leads & Pipelines -->
+      <g transform="translate(-230, 0)">
+        <rect x="-65" y="-14" width="130" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1" text-anchor="middle">💼 Lead Tracking</text>
+      </g>
+      <!-- Pill 2: Contact Management -->
+      <g transform="translate(-75, 0)">
+        <rect x="-70" y="-14" width="140" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1" text-anchor="middle">👥 Contact Portals</text>
+      </g>
+      <!-- Pill 3: Self-Hosting -->
+      <g transform="translate(85, 0)">
+        <rect x="-70" y="-14" width="140" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1" text-anchor="middle">🔒 Data Privacy</text>
+      </g>
+      <!-- Pill 4: Workflow Automation -->
+      <g transform="translate(240, 0)">
+        <rect x="-65" y="-14" width="130" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1" text-anchor="middle">🚀 Deal Workflows</text>
+      </g>
+    </g>
+
+    <!-- Small Footer Note in SVG -->
+    <text x="600" y="325" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">
+      ⭐ Star this repository to support open-source CRM innovation
+    </text>
+  </g>
+</svg>
