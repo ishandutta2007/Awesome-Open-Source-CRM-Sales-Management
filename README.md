@@ -248,7 +248,7 @@ Contributions are warmly welcome! If you know of an outstanding open-source CRM 
 1. Fork this repository.
 2. Create a new branch: `git checkout -b feature/new-crm-platform`
 3. Add your entry following the established format:
-   - Include a star badge linking to the repository's stargazers: `[![Stars](https://img.shields.io/github/stars/org/repo?style=social&color=white)](https://github.com/org/repo/stargazers)`
+   - Include a Stars_Badge linking to the repository's stargazers: `[![Stars](https://img.shields.io/github/stars/org/repo?style=social&color=white)](https://github.com/org/repo/stargazers)`
    - Include repository link, primary stack, license, and a concise 2–3 sentence description.
    - Insert it in the sorted order based on stargazers count.
 4. Submit a Pull Request with a clear description of why the tool is valuable for open-source sales management and CRM practitioners.
